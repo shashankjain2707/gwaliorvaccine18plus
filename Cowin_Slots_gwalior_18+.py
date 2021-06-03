@@ -1,12 +1,14 @@
+#made with love by shashank jain.
 import requests
 import time
 from datetime import datetime
 import schedule
 dist = 313
 channel_id = "@gwlvaccineslot"
+bot_token = "1850217717:AAGPEBy9LvIhomu0Osz0fhQjVRXsrbVPToE"
 now = datetime.now()
 today_date = now.strftime("%d-%m-%Y")
-api_url_telegram = "https://api.telegram.org/bot1850217717:AAGPEBy9LvIhomu0Osz0fhQjVRXsrbVPToE/sendMessage?chat_id={}&text=".format(channel_id)
+api_url_telegram = "https://api.telegram.org/bot{}/sendMessage?chat_id={}&text=".format(bot_token, channel_id)
 URL = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}'.format(
     dist, today_date)
 
@@ -39,7 +41,7 @@ def send_message_telegram(message):
         print(response)
          
 
-schedule.every(5).seconds.do(findAvailability)        
+schedule.every(30).seconds.do(findAvailability)        
 
  
 while True:
