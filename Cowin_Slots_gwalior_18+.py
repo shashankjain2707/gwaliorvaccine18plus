@@ -21,7 +21,7 @@ def findAvailability():
     response_json = result.json()
     for center in response_json["centers"]:
         for session in center["sessions"]:
-            if session["available_capacity_dose2"] > 10 and session["min_age_limit"]==18 and session["vaccine"]=="COVAXIN" :
+            if session["available_capacity"] > 10 and session["min_age_limit"]==18 :
                message = "⚠Vaccination centers for 18-44 age group❗ \n🔰Center: {} \n🌍Pincode: {} \n💉Vaccine: {} \n💸Fee type: {}  \n🧑Age: {} \n💉Dose 1: {} \n💉Dose 2: {} \n📅Date: {} \n\n🌐Cowin: https://selfregistration.cowin.gov.in | @gwlvaccineslot".format(
                 center["name"],
                 center["pincode"],
