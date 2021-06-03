@@ -4,8 +4,8 @@ import time
 from datetime import datetime
 import schedule
 dist = 313
-channel_id = "@gwlvaccineslot"
-bot_token = "1850217717:AAGPEBy9LvIhomu0Osz0fhQjVRXsrbVPToE"
+channel_id = "@yourchannel"
+bot_token = "your bot token"
 now = datetime.now()
 today_date = now.strftime("%d-%m-%Y")
 api_url_telegram = "https://api.telegram.org/bot{}/sendMessage?chat_id={}&text=".format(bot_token, channel_id)
